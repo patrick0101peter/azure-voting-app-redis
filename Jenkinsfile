@@ -34,7 +34,7 @@ pipeline {
          steps {
             sh '''
                sudo /usr/local/bin/docker-compose up -d
-               ./scripts/test_container.sh
+               sh /scripts/test_container.sh
                '''
          }
          post {
