@@ -29,7 +29,7 @@ pipeline {
       }
       stage('Start test app') {
          steps {
-            ssh '''
+            sh '''
                sudo docker-compose up -d
                ./scripts/test_container.sh
                '''
