@@ -22,8 +22,8 @@ pipeline {
           sh '''
             sudo docker images -a
             cd azure-vote/
-            sudo docker images -a
             sudo docker build -t jenkins-pipeline .
+            sudo docker images -a
             cd ..'''
         }
       }
