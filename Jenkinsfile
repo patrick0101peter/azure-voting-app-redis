@@ -12,6 +12,11 @@ pipeline {
             sh '''hostname'''
          }
       }
+      stage('Verify hostname') {
+         steps {
+            sh '''whoami'''
+         }
+      }
       stage('Docker Build') {
         steps {
           sh '''
