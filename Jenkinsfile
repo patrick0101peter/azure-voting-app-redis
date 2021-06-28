@@ -56,7 +56,7 @@ pipeline {
       stage('Stop test app') {
          steps {
             sh '''
-               docker-compose down
+               sudo /usr/local/bin/docker-compose down
                '''
          }
       }
