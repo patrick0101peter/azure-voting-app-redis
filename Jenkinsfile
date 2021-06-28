@@ -24,13 +24,16 @@ pipeline {
             cd azure-vote/
             sudo docker build -t jenkins-pipeline .
             sudo docker images -a
-            cd ..'''
+            cd ..
+            pwd
+            '''
+            
         }
       }
       stage('Start test app') {
          steps {
             sh '''
-               sudo docker-compose up -d
+               sudo /usr/local/bin/docker-compose up -d
                ./scripts/test_container.sh
                '''
          }
