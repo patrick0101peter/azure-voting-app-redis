@@ -7,6 +7,11 @@ pipeline {
             echo "$GIT_BRANCH"
          }
       }
+      stage('Verify hostname') {
+         steps {
+            sh '''hostname'''
+         }
+      }
       stage('Docker Build') {
         steps {
           sh '''
