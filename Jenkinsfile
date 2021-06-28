@@ -21,7 +21,7 @@ pipeline {
         steps {
           sh '''
             sudo docker images -a
-            cd UBS_Test1
+            cd azure-vote/
             sudo docker images -a
             sudo docker build -t jenkins-pipeline .
             cd ..'''
