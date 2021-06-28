@@ -12,7 +12,7 @@ pipeline {
             sh '''hostname'''
          }
       }
-      stage('Verify hostname') {
+      stage('Verify user') {
          steps {
             sh '''whoami'''
          }
